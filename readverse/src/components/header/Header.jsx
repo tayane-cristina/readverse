@@ -1,16 +1,17 @@
 import React from 'react';
 import { AuthLinks, HeaderContainer, Nav, SearchForm, Title } from './HeaderStyles';
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
 return(
 <HeaderContainer>
-    <Title>Read Verse</Title>
+    <Link to='/'><Title>Read Verse</Title></Link>
 
     <Nav>
-        <a>Livros</a>
-        <a>Autores</a>
-        <a>Matérias</a>
+        <Link to='/books'>Livros</Link>
+        <Link to='/authors'>Autores</Link>
+        <Link to='articles'>Matérias</Link>
     </Nav>
 
     <SearchForm>
