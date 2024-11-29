@@ -32,35 +32,6 @@ export const Nav = styled.nav`
     
 `;
 
-export const SearchForm = styled.form`
-    display: flex;
-    flex-direction-row;
-    justify-content: space-around;
-    width: 40%;
-
-    input{
-        width: 85%;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-    }
-
-    button{
-        width: 10%
-        cursor: pointer;
-        border-radius: 5px;
-        padding: 10px;
-        transition: 0.2s;
-        font-weight: bold;
-
-    }
-
-    button:hover {
-        background-color: gray;
-        color: white
-    }
-
-`;
 
 export const AuthLinks = styled.div`
     display: flex;

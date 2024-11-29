@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthLinks, HeaderContainer, Nav, SearchForm, Title } from './HeaderStyles';
+import { AuthLinks, HeaderContainer, Nav, Title } from './HeaderStyles';
 import { Link } from 'react-router-dom'
 
 const Header = () => {
@@ -13,11 +13,6 @@ return(
         <Link to='/authors'>Autores</Link>
         <Link to='articles'>Matérias</Link>
     </Nav>
-
-    <SearchForm>
-        <input type='text' placeholder='Pesquisar'></input>
-        <button>Buscar</button>
-    </SearchForm>
 
     <AuthLinks>
         <a>Fazer login</a>
