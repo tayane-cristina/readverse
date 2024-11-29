@@ -5,6 +5,7 @@ import ReasonsToRead from './ReasonsToRead'
 import escritor from '../../assets/homepage-img-icons/escritor.png'
 import livro from '../../assets/homepage-img-icons/livro.png'
 import ArticlesPreVision from '../articles/ArticlesPreVision';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -31,11 +32,11 @@ return(
         <section className='homepage-selectRead'>
             <h3>Encontre sua próxima leitura através do nosso guia de obras ou autores.</h3>
             <div>
-                <img className='icon-selectRead' src={livro} alt='icon-livro'></img>
+                <Link to='/books'><img className='icon-selectRead' src={livro} alt='icon-livro'></img></Link>
                 <p>Em busca de uma leitura única? Navegue por nossa coleção de livros e descubra títulos que vão prender sua atenção e te acompanhar em novas jornadas.</p>
             </div>
             <div>
-                <img className='icon-selectRead' src={escritor} alt='icon-pessoa'></img>
+                <Link to='/authors'><img className='icon-selectRead' src={escritor} alt='icon-pessoa'></img></Link>
                 <p>Se você já tem um autor preferido ou quer explorar novas referências, clique aqui e encontre livros organizados pelos melhores nomes da literatura.</p>
             </div>
         </section>
