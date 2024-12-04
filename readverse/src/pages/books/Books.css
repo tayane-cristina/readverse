@@ -1,11 +1,13 @@
 .books-page{
-    background-color: aqua;
+    background-color: rgba(0, 153, 255, 0.082);
 }
 
+/*seção de pesquisa*/
 .search-form {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     width: 40%;   
 }
 
@@ -29,3 +31,38 @@
         background-color: gray;
         color: white
     }
+
+/*seção cards books*/
+.cardBooks-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cardBooks{
+    background-color: rgb(102, 102, 101);
+    margin: 30px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    width: 15vw;
+    height: 50vh;
+    border-radius: 5px;
+    box-shadow: inset;
+    box-shadow: rgba(0, 0, 0, 0.24) -5px 3px 8px; 
+    cursor: pointer;
+}
+
+.cardBooks h2 {
+    font-size: 16px;
+}
+
+.book-cover{
+    width: 80%;
+    border-radius: 5px;
+}
