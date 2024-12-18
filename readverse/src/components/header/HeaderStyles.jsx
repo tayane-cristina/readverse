@@ -6,23 +6,26 @@ export const HeaderContainer = styled.div`
     align-items: center;
     justify-content: space-around;
     width: 100vw;
-    background-color: pink;
-    font-size: 19px;
+    height: 3rem;
+    background-color:  rgb(106, 7, 199);
+    font-size: 20px;
     border-radius: 5px;
 `;
 
 export const Title = styled.h2`
-
+    color: white;
+    width: 50vw;
+    text-align: center;
 `;
 
 export const Nav = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 15%;
+    width: 35%;
 
     a {
-        color: black;
+        color: rgba(255, 255, 255, 0.808);
         transition: 0.2s;
 
         &:hover{
@@ -37,10 +40,11 @@ export const AuthLinks = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 15%;
+    width: 25%;
 
     a{
-    color: gray;
+    color: white;
+    font-weight: 300;
     text-decoration: underline;
 
     &:hover {

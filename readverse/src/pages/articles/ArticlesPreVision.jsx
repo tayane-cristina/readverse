@@ -40,7 +40,7 @@ return(
             <img className='article-capa' src={art.image} alt="imagem-de-leitura"></img>
             <p><strong>{art.title}</strong></p>
             <p>{art.text}</p>
-            <Link to='/'>Ver mais</Link>
+            <Link to='/articles'>Ver mais</Link>
         </div>
     ))
 )

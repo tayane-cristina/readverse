@@ -1,0 +1,19 @@
+.about-page{
+    width: 70%;
+    margin: auto;
+    margin-top: 8rem;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.767);
+}
+
+.about-title{
+    font-size: 4rem;
+}
+
+.about-text{
+    font-size: 28px;
+    line-height: 1.5;
+}

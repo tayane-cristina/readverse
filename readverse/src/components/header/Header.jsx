@@ -6,12 +6,13 @@ const Header = () => {
 
 return(
 <HeaderContainer>
-    <Link to='/'><Title>Read Verse</Title></Link>
+    <Link to='/'><Title>ReadVerse</Title></Link>
 
     <Nav>
         <Link to='/books'>Livros</Link>
         <Link to='/authors'>Autores</Link>
         <Link to='articles'>Matérias</Link>
+        <Link to='about'>Sobre</Link>
     </Nav>
 
     <AuthLinks>

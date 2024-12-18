@@ -7,6 +7,7 @@ import Home from './pages/home/Home';
 import Books from './pages/books/Books';
 import Authors from './pages/authors/Authors';
 import Articles from './pages/articles/Articles';
+import About from './pages/about/About';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/books' exact element={<Books/>}></Route>
         <Route path='/authors' exact element={<Authors />}></Route>
         <Route path='/articles' exact element={<Articles />}></Route>
+        <Route path='/about' exact element={<About />}></Route>
       </Routes>
       
       

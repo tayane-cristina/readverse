@@ -8,6 +8,7 @@ const FecthBooksApi = () => {
     const [query, setQuery] = useState("");
     const [books, setBooks] = useState([]);
     const [error, setError] = useState(null)
+    const [maxresults, setMaxResults] = useState(12)
 
     const API_KEY = "AIzaSyCKY4nrujns1vnPZ7LwpPBOXpmgN5lXcJQ";
 
@@ -19,7 +20,7 @@ const FecthBooksApi = () => {
                 params: {
                     q: 't',
                     orderBy: 'relevance',
-                    maxResults: 40,
+                    maxResults: maxresults,
                 },
             });
 
@@ -35,7 +36,7 @@ const FecthBooksApi = () => {
         } 
 
         fetchBooks()
-    }, [])
+    }, [maxresults])
 
     const fetchBooksQuery = async () => {
                 
@@ -45,7 +46,7 @@ const FecthBooksApi = () => {
                     params: {
                         q: query,
                         startIndex: 10,
-                        maxResults: 10,
+                        maxResults: maxresults,
                         key: API_KEY,
                     },
             }
@@ -55,6 +56,12 @@ const FecthBooksApi = () => {
             console.log(error)
         }
     };
+
+    const seeMore = () => {
+        setMaxResults((prevState) => prevState + 12)
+        console.log(maxresults)
+    }
+    
     
 return(
     <div>
@@ -75,9 +82,10 @@ return(
                 </button>
             </section>
         
-            <p>Filtros</p>
+            
             <section className='books-filter'>
-                <select>
+            <p><strong>Filtros:</strong></p>
+                <select className='select-category'>
                     <option value=''>Categoria</option>
                     <option value='romance'>Romance</option>
                     <option value='ficção'>Ficção</option>
@@ -85,7 +93,7 @@ return(
                     <option value='biografia'>Biografia</option>
                 </select>
 
-                <select>
+                <select className='select-category'>
                     <option value=''>Nacionalidade</option>
                     <option value='brasileiro'>Brasileiro</option>
                     <option value='americano'>Americano</option>
@@ -97,15 +105,18 @@ return(
 
         <h2>Lista de livros</h2>
 
-        {query.length > 0 ? (
-             <ul className='cardBooks-content'>
-                {books.map((book, index) => (
-                    <li key={index} className='cardBooks'>
-                        <CardBooks title={book.volumeInfo.title} author={book.volumeInfo.authors?.join(', ')} cover={book.volumeInfo.imageLinks?.thumbnail}/>
-                    </li>
-                ))}
-                {console.log(books)}
-            </ul>
+        {query.length >= 0 ? (
+            <div>
+                <ul className='cardBooks-content'>
+                    {books.map((book, index) => (
+                        <li key={index} className='cardBooks-li'>
+                            <CardBooks title={book.volumeInfo.title} author={book.volumeInfo.authors?.join(',')} cover={book.volumeInfo.imageLinks?.thumbnail}/>
+                        </li>
+                    ))}
+                </ul>
+                <button className='see-more' onClick={seeMore}>Ver mais...</button>
+            </div>
+             
         ) : (
             <ul className='cardBooks-content'>
                 {books.map((book, index) => (
@@ -113,7 +124,6 @@ return(
                         <CardBooks title={book.volumeInfo.title}/>
                     </li>
                 ))}
-                {console.log(books)}
             </ul>
         )}
 

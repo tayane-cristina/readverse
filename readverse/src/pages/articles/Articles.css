@@ -1,0 +1,19 @@
+.card-movel{
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cardMovel-card{
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    list-style: none;
+    width: 20%;
+    text-align: center;
+    height: 20rem;
+    
+}
