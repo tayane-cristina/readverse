@@ -7,7 +7,13 @@ const Header = () => {
     return(
     <div>
         <h2><Link to='/'>ReadVerse</Link></h2>
-        <Link to='/collection'>Conheça nossa coleção</Link>
+
+        <nav>
+            <Link to='/collection'>Biblioteca Online</Link>
+            <Link to="/authors">Autores</Link>
+            <Link to="/menuquiz">Quiz</Link>
+            <Link to="/about">Sobre</Link>
+        </nav>
     </div>
     )
 }

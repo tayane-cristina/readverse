@@ -18,6 +18,8 @@ import ClassicFansQuiz from './pages/quiz/ClassicFansQuiz.jsx';
 import AdventureFansQuiz from './pages/quiz/AdventureFansQuiz.jsx';
 import FictionsFansQuiz from './pages/quiz/FictionsFansQuiz.jsx';
 import RomanceFansQuiz from './pages/quiz/RomanceFansQuiz.jsx';
+import Authors from './components/header/authors/Authors.jsx';
+import About from './components/header/about/About.jsx';
 function App() {
 
   return (
@@ -25,8 +27,12 @@ function App() {
 
       <Header />
       <Routes>
+        {/*Rotas do navbar*/}
         <Route path='/' element={<Home />}></Route>
-        <Route path='/collection' element={<Collection />}></Route>
+        <Route path='/authors' element={<Authors />}></Route>
+        <Route path='/collection' element={<Collection />}></Route>.
+        <Route path='/about' element={<About />}></Route>
+
 
         {/*Rotas para as páginas de desafios literários*/}
         <Route path='/twelvebooksfor' element={<TwelveBooksFor />}></Route>

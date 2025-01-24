@@ -234,3 +234,33 @@ a, button{
     width: 500px;
     height: 650px;
 }
+
+/*Estilos das páginas de autores*/
+.authors-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.authors-list li{
+    padding: 10px;
+    width: 20rem;
+    height: 22rem;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(70, 68, 70, 0.123);
+    border-radius: 10px;
+}
+
+.authors-list li img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    padding: 10px;
+}
