@@ -3,6 +3,7 @@ import Carousel from './carousel/Carousel';
 import BenefitsOfReading from '../ benefitsOfReading/BenefitsOfReading';
 import ReadingChallenge from './readingChallenge/ReadingChallenge';
 import BookReviews from './bookReviews/BookReviews';
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,6 +17,8 @@ return(
     <BenefitsOfReading />
     <ReadingChallenge />
     <BookReviews />
+
+    <Link to="/menuquiz">QUIZ</Link>
     
 </div>
 

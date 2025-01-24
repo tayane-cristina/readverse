@@ -11,6 +11,13 @@ import AdaptedForFilm from './pages/readChallengesPages/AdaptedForFilm';
 import Alphabet from './pages/readChallengesPages/Alphabet'
 import AroundTheWorld from './pages/readChallengesPages/AroundTheWorld';
 import ForDecades from './pages/readChallengesPages/ForDecades'
+import MenuQuiz from './pages/quiz/MenuQuiz';
+import  GuessBookQuiz  from './pages/quiz/GuessBookQuiz.jsx';
+import HorrorFansQuiz from './pages/quiz/HorrorFansQuiz.jsx';
+import ClassicFansQuiz from './pages/quiz/ClassicFansQuiz.jsx';
+import AdventureFansQuiz from './pages/quiz/AdventureFansQuiz.jsx';
+import FictionsFansQuiz from './pages/quiz/FictionsFansQuiz.jsx';
+import RomanceFansQuiz from './pages/quiz/RomanceFansQuiz.jsx';
 function App() {
 
   return (
@@ -28,6 +35,15 @@ function App() {
         <Route path='/alphabet' element={<Alphabet />}></Route>
         <Route path='/aroundtheworld' element={<AroundTheWorld />}></Route>
         <Route path='/fordecade' element={<ForDecades />}></Route>
+
+        {/*Rotas para o quiz*/}
+        <Route path='/menuquiz' element={<MenuQuiz />} ></Route>
+        <Route path='/guessbookquiz' element={<GuessBookQuiz />}></Route>
+        <Route path='/horrorfansquiz' element={<HorrorFansQuiz />}></Route>
+        <Route path='/classicfansquiz' element={<ClassicFansQuiz />}></Route>
+        <Route path='/adventurefansquiz' element={<AdventureFansQuiz />}></Route>
+        <Route path='/fictionsfansquiz' element={<FictionsFansQuiz />}></Route>
+        <Route path='/romancefansquiz' element={<RomanceFansQuiz />}></Route>
       </Routes>
     </BrowserRouter>
   )
