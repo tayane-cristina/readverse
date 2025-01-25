@@ -1,0 +1,76 @@
+/*Estilo Mobile first*/
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 0;
+}
+
+
+/*Estilo para telas medias*/
+@media (min-width: 768px) {}
+
+/*Estilo para telas grandes*/
+@media (min-width: 1024px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 4rem;
+        background-color: #4d235c;
+    }
+
+    .logo{
+        font-size: 2.5rem;
+        color: white;
+        font-family: "Agu Display", serif;
+        font-weight: 400;
+    }
+
+    .header nav {
+        width: 40%;
+    }
+
+    .header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header nav ul li {
+        padding: 10px;
+    }
+
+    .header nav ul li a{
+        font-size: 18px;
+        color: rgb(252, 252, 252);
+        position: relative;
+        text-decoration: none;
+        color: #f3f2f2;
+        font-family: "Andika", serif;font-weight: 700;
+    }
+
+    .header nav ul li a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: #cc6504;
+        transition: width 0.3s ease-in-out;
+      }
+
+      .header nav ul li a:hover::after {
+        width: 100%;
+      }
+}

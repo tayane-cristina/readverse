@@ -4,15 +4,12 @@ import BenefitsOfReading from '../ benefitsOfReading/BenefitsOfReading';
 import ReadingChallenge from './readingChallenge/ReadingChallenge';
 import BookReviews from './bookReviews/BookReviews';
 import { Link } from 'react-router-dom';
-
-
+import './Home.css'
 
 const Home = () => {
 
 return(
-<div>
-    <h2>Home</h2>
-
+<div className='principal-div home'>
     <Carousel />
     <BenefitsOfReading />
     <ReadingChallenge />

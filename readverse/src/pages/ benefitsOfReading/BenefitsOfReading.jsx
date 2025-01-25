@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { AllBooksData } from '../../data/allBooksData/AllBooksData';
+import './BenefitsOfReading.css';
+import notbook from '../../assets/icons/not-book.png'
 
 const BenefitsOfReading = () => {
 
@@ -15,25 +17,40 @@ const BenefitsOfReading = () => {
     console.log(AllBooksData[5])
 
 return(
-    <div className='principal-div-BenefitsOfReading'>
+    <div className='BenefitsOfReading'>
         <ul className='benefits-list'>
-            <li className='benefit-item'>
-                <p><strong>Ler Estimula o Cérebro Como um Exercício</strong></p>
+            <li className='benefit-item impar'>
+                <p className='subtitle'><strong>Ler Estimula o Cérebro Como um Exercício</strong></p>
+                <p>
+                    Ler regularmente melhora a comunicatividade cerebral e fortalece habilidades como 
+                    memória e foco, segundo estudos da Emory University. É um exercício poderoso para a mente.
+                </p>
             </li>
-            <li className='benefit-item'>
-                <p><strong>Ler Ficcional Aumenta a Empatia</strong></p>
+            <li className='benefit-item par'>
+                <p className='subtitle'><strong>Leitura e o Relaxamento</strong></p>
+                <p>
+                    A leitura reduz o estresse em até 68%, conforme a Journal of Psychiatric Research. 
+                    É uma forma simples e eficaz de relaxar e cuidar da saúde mental.
+                </p>
             </li>
-            <li className='benefit-item'>
-                <p><strong>Ler Antes de Dormir Pode Melhorar a Qualidade do Sono</strong></p>
+            <li className='benefit-item impar'>
+                <p className='subtitle'><strong>Ler Nos Torna Mais Empáticos.</strong></p>
+                <p>
+                    Ler histórias aumenta a empatia, pois nos conecta com as emoções dos personagens. Pesquisas 
+                    mostram  que isso melhora as relações sociais e a compreensão do próximo.
+                </p>
             </li>
-            <li className='benefit-item'>
-                <p><strong>A Leitura Reduz os Riscos de Declínio Cognitivo</strong></p>
+            <li className='benefit-item par'>
+                <p className='subtitle'><strong>A Leitura Reduz os Riscos de Declínio Cognitivo.</strong></p>
+                <p>
+                    Estudos da Neurology Journal indicam que a leitura regular reduz o risco de 
+                    declínio cognitivo, ajudando a manter o cérebro ativo e saudável na velhice.
+                </p>
             </li>
         </ul>
 
         <div className='books-sorted-div'>
-            <p><strong>Em dúvida sobre o que ler no momento? clique no botão abaixo e sorteie seu próximo livro!</strong></p>
-            <button onClick={sortBook}>Sortear</button>
+            <h2>Em dúvida sobre o que ler no momento? clique no botão abaixo e sorteie seu próximo livro!</h2>
             {sortedBook && AllBooksData[sortedBook] ? (
              <div className='book-sorted-display'>
                 <p><strong>{AllBooksData[sortedBook].title}</strong></p>
@@ -43,15 +60,16 @@ return(
                 src={AllBooksData[sortedBook].cover}
                 alt={`${AllBooksData[sortedBook].title}-image`}
                 />
-                <p>{AllBooksData[sortedBook].description}</p>
+                <p className='book-sorted-description' ><strong>Descrição: </strong>{AllBooksData[sortedBook].description}</p>
                 </div>
                 ) : (
-                <div>
-                    <p>Nenhum livro sorteado</p>
+                <div className='not-book-sorted'>
+                    <img className='not-book' src={notbook} alt='book-image'></img>
                 </div>
             )}
+            <button className='sort-btn' onClick={sortBook}>Sortear</button>
             </div>
-        
+            
     </div>
    
 
