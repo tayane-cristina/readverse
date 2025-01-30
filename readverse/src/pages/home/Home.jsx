@@ -9,14 +9,24 @@ import './Home.css'
 const Home = () => {
 
 return(
-<div className='principal-div home'>
+<div className='home'>
     <Carousel />
     <BenefitsOfReading />
     <ReadingChallenge />
     <BookReviews />
-
-    <Link to="/menuquiz">QUIZ</Link>
-    
+    <div className='quiz-way'>
+        <Link to="/menuquiz">
+            <span>Q</span>
+            <span>U</span>
+            <span>I</span>
+            <span>Z</span>
+            <span style={{color: 'white'}}>-</span>
+            <span>G</span>
+            <span>A</span>
+            <span>M</span>
+            <span>E</span>
+        </Link>
+    </div>
 </div>
 
 )

@@ -1,0 +1,68 @@
+.authors{
+    height: 100vh;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 5rem;
+}
+
+.authors h2{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.authors-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.authors-li {
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    background-color: rgba(128, 128, 128, 0.068);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.authors-li p{
+    text-align: center;
+    font-size: 18px;
+}
+
+.authors-li button{
+    background-color: rgba(6, 154, 240, 0.822);
+    color: white;
+}
+
+.author-image {
+    width: 220px;
+    height: 240px;
+    border-radius: 50%;
+
+    padding: 10px;
+}
+
+/*Estilos do modal*/
+.authors-modal-image{
+    width: 20%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.authors-modal-image img{
+    width: 350px;
+    height: 350px;
+}
+
+.authors-modal-infor{
+    width: 60%;
+}

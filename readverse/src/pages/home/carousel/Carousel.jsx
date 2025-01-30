@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Biography } from '../../../data/Biography';
-import arrow from '../../../assets/icons/arrow.png'
+import arrow from '../../../assets/icons/seta.png'
 import './Carousel.css'
 
 const Carousel = () => {
@@ -27,10 +27,10 @@ const next = () => {
 }
 
 return(
-<div className='carousel'>
-    <h2>Bem-vindo ao ReadVerse, conheça novos autores, obras e inspiração para suas próximas leituras</h2>
+<div className='carousel div-container'>
+    <p className='carousel-text-intro'>Prepare-se para mergulhar em um mundo de descobertas literárias. Bem-vindo ao <span className='orange'>Readverse</span>, onde histórias ganham vida!</p>
     <ul className='carousel-ul'>
-        <button onClick={before}><img src={arrow} alt='left-arrow-icon' style={{transform: 'scaleX(-1)'}} /></button>
+        <img onClick={before} className='left-arrow' src={arrow} alt='left-arrow-icon'/>
         {Biography.slice(counter, counter + 1).map((autor, index) => (
             <li key={index} className='carousel-li'>
                 <img className='carousel-image-author'
@@ -59,7 +59,7 @@ return(
                 </section>
             </li>
         ))}
-        <button onClick={next}><img src={arrow} alt='left-arrow-icon'/></button>
+        <img onClick={next} className='right-arrow' src={arrow} alt='left-arrow-icon'/>
     </ul> 
 </div>
 

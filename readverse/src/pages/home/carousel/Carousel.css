@@ -1,10 +1,11 @@
 .carousel {
-    margin-top: 4rem;
-    margin-bottom: 0;
+    margin-top: 5rem;
+    height: 100vh
 }
 
-.carousel h2 {
-    padding: 3rem;
+.carousel-text-intro {
+    padding: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -16,6 +17,8 @@
     justify-content: space-around;
     background-color: white;
     padding: 1rem;
+    height: 80vh;
+    border-radius: 10px;
 }
 
 .carousel button {
@@ -34,8 +37,8 @@
 }
 
 .carousel-image-author{
-    width: 320px;
-    height: 350px;
+    width: 340px;
+    height: 450px;
     border-radius: 20%;
     padding: 10px;
 }
@@ -48,6 +51,7 @@
     justify-content: space-around;
     padding: 10px;
     font-size: 19px;
+    height: 60vh;
 }
 
 .carousel-list-best-books{
@@ -56,10 +60,15 @@
 }
 
 .carousel-list-best-books li {
-    border-bottom: 2px solid var(--secondary-color);
+    line-height: 1.8;
+    list-style: inside;
 }
 
 .carousel-list-phases{
     display: flex;
     flex-direction: column;
+}
+
+.orange {
+    color: var(--secondary-color);
 }

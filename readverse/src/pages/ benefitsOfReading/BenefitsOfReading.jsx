@@ -17,32 +17,32 @@ const BenefitsOfReading = () => {
     console.log(AllBooksData[5])
 
 return(
-    <div className='BenefitsOfReading'>
+    <div className='BenefitsOfReading div-container'>
         <ul className='benefits-list'>
-            <li className='benefit-item impar'>
+            <li className='benefit-item impar-arg'>
                 <p className='subtitle'><strong>Ler Estimula o Cérebro Como um Exercício</strong></p>
-                <p>
+                <p className='benefit-text'>
                     Ler regularmente melhora a comunicatividade cerebral e fortalece habilidades como 
                     memória e foco, segundo estudos da Emory University. É um exercício poderoso para a mente.
                 </p>
             </li>
-            <li className='benefit-item par'>
+            <li className='benefit-item par-arg'>
                 <p className='subtitle'><strong>Leitura e o Relaxamento</strong></p>
-                <p>
+                <p className='benefit-text'>
                     A leitura reduz o estresse em até 68%, conforme a Journal of Psychiatric Research. 
                     É uma forma simples e eficaz de relaxar e cuidar da saúde mental.
                 </p>
             </li>
-            <li className='benefit-item impar'>
+            <li className='benefit-item impar-arg'>
                 <p className='subtitle'><strong>Ler Nos Torna Mais Empáticos.</strong></p>
-                <p>
+                <p className='benefit-text'>
                     Ler histórias aumenta a empatia, pois nos conecta com as emoções dos personagens. Pesquisas 
                     mostram  que isso melhora as relações sociais e a compreensão do próximo.
                 </p>
             </li>
-            <li className='benefit-item par'>
+            <li className='benefit-item par-arg'>
                 <p className='subtitle'><strong>A Leitura Reduz os Riscos de Declínio Cognitivo.</strong></p>
-                <p>
+                <p className='benefit-text'>
                     Estudos da Neurology Journal indicam que a leitura regular reduz o risco de 
                     declínio cognitivo, ajudando a manter o cérebro ativo e saudável na velhice.
                 </p>

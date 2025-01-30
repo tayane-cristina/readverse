@@ -10,7 +10,32 @@
 }
 
 body{
-    font-family: "Andika", serif;
+    font-family: arial;
+}
+
+.left-arrow{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: inherit;
+    transform: scaleX(-1);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.right-arrow{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: inherit;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.right-arrow:hover, .left-arrow:hover {
+    background-color: rgba(128, 128, 128, 0.151);
 }
 
 * {
@@ -25,7 +50,7 @@ h1, h2, h3,h4, h5, h6{
 
 .principal-div{
     margin: 0 auto;
-    padding: 20px;
+    padding: 3rem;
     width: 100%; 
     max-width: 1200px; 
     box-sizing: border-box;
@@ -34,9 +59,37 @@ h1, h2, h3,h4, h5, h6{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.div-container{
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%; 
+    max-width: 1200px; 
+    box-sizing: border-box;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 html{
     font-family: sans-serif;
     
+}
+
+.simply-btn{
+    background-color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-align: center;
+    width: 10rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.simply-btn:hover{
+    background-color: rgba(128, 128, 128, 0.233);
 }
 
 a, button{
@@ -85,112 +138,3 @@ li {
     
 }
 
-/*Estilos da página reading challenge*/
-
-.principal-div-readingChallenge{
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.readingChallenge-section-logo{
-    width:35rem;
-    height: 35rem;
-}
-
-.readingChallenge-section-logo p{
-    font-size: 95px;
-}
-
-.readingChallenge-list{
-    width: 50rem;
-    height: 50rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0px;
-    gap: 10px;
-    justify-items: center;
-    
-}
-
-.challenge{
-    list-style: none;
-    padding: 10px;
-    margin: 10px;
-    height: 13rem;
-    width: 12rem;
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/*estilos do componente de resenhas*/
-
-.reviews-ul{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.reviews-ul li{
-    width: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: space-around;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.062);
-    padding: 15px;
-}
-
-.bookReviews-principal-div{
-    height: 100vh;
-}
-
-.review-book-cover{
-    width: 150px;
-    height: 250px;
-    align-self: center;
-}
-
-.book-sorted-cover{
-    width: 500px;
-    height: 650px;
-}
-
-/*Estilos das páginas de autores*/
-.authors-list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-}
-
-.authors-list li{
-    padding: 10px;
-    width: 20rem;
-    height: 22rem;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(70, 68, 70, 0.123);
-    border-radius: 10px;
-}
-
-.authors-list li img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    padding: 10px;
-}

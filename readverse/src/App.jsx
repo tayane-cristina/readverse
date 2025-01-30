@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+
 //Rotas
 import Home from './pages/home/Home';
 import Header from './components/header/Header';
@@ -19,7 +20,7 @@ import AdventureFansQuiz from './pages/quiz/AdventureFansQuiz.jsx';
 import FictionsFansQuiz from './pages/quiz/FictionsFansQuiz.jsx';
 import RomanceFansQuiz from './pages/quiz/RomanceFansQuiz.jsx';
 import Authors from './components/header/authors/Authors.jsx';
-import About from './components/header/about/About.jsx';
+import About from './pages/about/About.jsx';
 function App() {
 
   return (

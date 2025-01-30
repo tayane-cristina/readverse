@@ -1,11 +1,11 @@
 .BenefitsOfReading{
     height: 100vh;
-    margin-top: 15rem;
-    margin-bottom: 10rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-color: white;
+    padding: 2rem;
 }
 
 .benefits-list{
@@ -22,12 +22,33 @@
     color: rgb(2, 2, 2);
     width: 70%;
     list-style: none;
-    height: 8rem;
+    height: auto;
     margin: 10px;
     text-align: center;
+    padding: 2rem;
     transition: 0.5s;
     font-size: 19px;
     font-weight: 100;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.benefit-item:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.benefit-item:hover .subtitle,
+.benefit-item:hover .benefit-text{
+    color: white;
+}
+
+.impar-arg{
+    align-self: flex-start;
+}
+
+.par-arg{
+    align-self: flex-end;
 }
 
 .books-sorted-div{
@@ -50,7 +71,8 @@
 }
 
 .book-sorted-cover{
-    height: 90%;
+    height: 700px;
+    width: 420px;
 }
 
 .book-sorted-description{
@@ -92,3 +114,4 @@
 .subtitle {
     color: var(--secondary-color);
 }
+

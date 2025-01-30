@@ -1,0 +1,13 @@
+.about {
+
+}
+
+.about-text{
+    margin-top: 6rem;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.5;
+}
