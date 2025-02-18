@@ -13,8 +13,8 @@ return(
 <div className='home'>
 
     <HomeIntroduce />
-  {/*
     <BenefitsOfReading />
+  {/*
     <ReadingChallenge />
     <BookReviews />
     <div className='quiz-way'>

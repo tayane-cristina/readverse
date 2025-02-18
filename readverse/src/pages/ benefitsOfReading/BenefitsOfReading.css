@@ -1,107 +1,92 @@
-.BenefitsOfReading{
+.BenefitsOfReading {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
-    background-color: white;
-    padding: 2rem;
+    justify-content: space-around;
 }
 
-.benefits-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
+.benefits-list {
     width: 50%;
-    height: 100%;
-}
-
-.benefit-item{
-    color: rgb(2, 2, 2);
-    width: 70%;
-    list-style: none;
-    height: auto;
-    margin: 10px;
-    text-align: center;
-    padding: 2rem;
-    transition: 0.5s;
-    font-size: 19px;
-    font-weight: 100;
-    transition: 0.5s;
-    border-radius: 10px;
-}
-
-.impar-arg{
-    align-self: flex-start;
-}
-
-.par-arg{
-    align-self: flex-end;
-}
-
-.books-sorted-div{
-    width: 60%;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: baseline;
-    height: 100vh;
+}
+
+.benefit-item {
+    width: 55%;
+    margin: 2rem;
     text-align: center;
-}
-
-.book-sorted-display{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 18px;
-}
-
-.book-sorted-cover{
-    height: 700px;
-    width: 420px;
-}
-
-.book-sorted-description{
-    font-size: 20px;
-    padding: 10px;
-}
-
-.sort-btn{
-    padding: 10px;
-    width: 30%;
-    font-size: 18px;
-    border-radius: 5px;
-    background-color: white;
-    border: 3px solid var(--secondary-color);
-    transition: 0.5s;
-    font-weight: bold;
-    margin: 10px;
-}
-
-.sort-btn:hover {
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-.not-book-sorted{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.not-book{
-    width: 250px;
-    height: 300px;
-    margin: 0 auto;
+    font-size: 1.6rem;
+    padding: 1rem;
+    line-height: 1.3;
+    font-family: "Shadows Into Light Two", serif;
 }
 
 .subtitle {
-    color: var(--secondary-color);
+    text-transform: uppercase;
+    color: rgb(15, 172, 172);
 }
 
+.par-arg {
+    align-self: flex-end;
+}
+
+.impar-arg {
+    align-self: baseline;
+}
+
+.books-sorted-div{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    text-align: center;
+    padding: 2rem;
+}
+
+.books-sorted-div h2 {
+    font-family: "Shadows Into Light Two", serif;
+    font-size: 2rem;
+}
+
+.book-sorted-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    font-size: 22px;
+}
+
+.not-book {
+    width: 350px;
+    height: 400px;
+}
+
+.book-sorted-cover{
+    width: 350px;
+    height: 400px;
+    margin: 1.5rem;
+}
+
+.sort-btn {
+    background-color: #007bff; /* Azul padrão */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease, transform 0.2s ease;
+    margin-top: 2rem;
+}
+
+
+.sort-btn:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+    transform: scale(1.05);
+}

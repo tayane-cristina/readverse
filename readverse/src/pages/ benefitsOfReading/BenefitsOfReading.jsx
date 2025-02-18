@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { AllBooksData } from '../../data/allBooksData/AllBooksData';
 import './BenefitsOfReading.css';
-import notbook from '../../assets/icons/not-book.png'
+import notbook from '../../assets/icons/book.gif'
 
 const BenefitsOfReading = () => {
 
@@ -17,7 +17,7 @@ const BenefitsOfReading = () => {
     console.log(AllBooksData[5])
 
 return(
-    <div className='BenefitsOfReading div-container'>
+    <div className='BenefitsOfReading'>
         <ul className='benefits-list'>
             <li className='benefit-item impar-arg'>
                 <p className='subtitle'><strong>Ler Estimula o Cérebro Como um Exercício</strong></p>
@@ -61,7 +61,7 @@ return(
                 </div>
             )}
             <button className='sort-btn' onClick={sortBook}>Sortear</button>
-            </div>
+        </div>
             
     </div>
    
