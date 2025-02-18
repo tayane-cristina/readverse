@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Biography } from '../../../data/Biography';
 import Modal from 'react-modal';
 import { useState } from 'react';
@@ -8,99 +8,63 @@ Modal.setAppElement('#root');
 
 const Authors = () => {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedAuthor, setSelectedAuthor] = useState(null);
+  const [selectedAuthor, setSelectedAuthor] = useState(0);
 
-    //Funções para abrir e fechar o modal
-    const openModal = (author) => {
-        setSelectedAuthor(author);
-        setIsModalOpen(true);
+    const handleSelected = (author) => {
+
+      setSelectedAuthor(author)
     }
 
-    const closeModal = () => {
-        setIsModalOpen(false);
-        setSelectedAuthor(null)
-    }
+  const author = Biography[selectedAuthor];
 
 return(
-<div className='authors'>
-    <h2>Conheça a biografia dos nossos autores selecionados</h2>
-    <ul className='authors-list'>        
+  <div className='authors'>
+    <aside>
+      <h2>Conheça a biografia dos nossos autores selecionados</h2>
+      <ul className='authors-list'>        
         {Biography.map((author, index) => (
-            <li key={index} className='authors-li'>
-                <img 
-                className='author-image'
-                src={author.image} 
-                alt={`${author.nomeCompleto}-image`}
-                ></img>
-                <p><strong>{author.nomeCompleto}</strong></p>
-                <button className='simply-btn' onClick={() => openModal(author)}>Ver mais</button>
-            </li>
+          <li 
+            key={index} 
+            className='authors-li'
+            onClick={() => handleSelected(index)} 
+          >
+            <p>{author.nomeCompleto}</p>
+          </li>
         ))}
-    </ul>
+      </ul>
+    </aside>
 
-    {selectedAuthor && (
-    <Modal
-    isOpen={isModalOpen}
-    onRequestClose={closeModal}
-    contentLabel={`Biografia de ${selectedAuthor.nomeCompleto}`}
-    style={{
-        content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        width: '70vw',
-        height: '70vh',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-        },
-        overlay: {
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        },
-    }}
-    >
-        <section className='authors-modal-image'>
-          <p><strong>{selectedAuthor.nomeCompleto}</strong></p>
-          <img 
-            src={selectedAuthor.image} 
-            alt={`Imagem de ${selectedAuthor.nomeCompleto}`} 
-            style={{ width: '150px', height: '150px', objectFit: 'cover', marginBottom: '10px' }}
-          />
-        </section>
-          
-        <section className='authors-modal-infor'>
-          <p>Data de nascimento: {selectedAuthor.dataDeNascimento}</p>
-          <p>
-            Biografia: {selectedAuthor.nomeCompleto} nasceu em {selectedAuthor.dataDeNascimento}, filho de {selectedAuthor.filiacao.pai} e {selectedAuthor.filiacao.mae}, {selectedAuthor.descendencia}.
-          </p>
-          <p>{selectedAuthor.biografia.infancia}</p>
-          <p>{selectedAuthor.biografia.entradaNoMundoLiterario}</p>
-          <p>{selectedAuthor.contextoDaEpoca}</p>
+    <div className='biography-display'>
+      <section className='biography-cover-section'>
+        <img className='biography-autor-image' src={author.image} alt={` image-${author.nomeCompleto}`}></img>
+      </section>
+      
+      <section className='biography-infor-section'> 
+        <p><strong>{author.nomeCompleto}</strong></p>
+        <p>
+          <strong>{author.nomeCompleto}</strong> nasceu em {author.dataDeNascimento}, filho de {author.filiacao.pai} e {author.filiacao.mae}, {author.descendencia}.
+        </p>
+        <p>{author.biografia.infancia}</p>
+        <p>{author.biografia.entradaNoMundoLiterario}</p>
+        <p>{author.contextoDaEpoca}</p>
 
-          <p>Suas principais obras são:</p>
-          <ul>
-            {selectedAuthor.livrosMaisFamosos.map((livro, i) => (
-              <li key={`${selectedAuthor.nomeCompleto}-livro-${i}`}>{livro}</li>
-            ))}
-          </ul>
+        <p><strong>Suas principais obras são:</strong></p>
+        <ul>
+          {author.livrosMaisFamosos.map((livro, i) => (
+            <li className='biography-autor-book' key={`${author.nomeCompleto}-livro-${i}`}>{livro}</li>
+          ))}
+        </ul>
 
-          <p>Algumas citações que marcaram seu estilo e obra:</p>
-          <ul>
-            {selectedAuthor.frases.map((frase, i) => (
-              <li key={`${selectedAuthor.nomeCompleto}-frase-${i}`}>{frase}</li>
-            ))}
-          </ul>
+        <p><strong>Algumas citações que marcaram seu estilo e obra:</strong></p>
+        <ul>
+          {author.frases.map((frase, i) => (
+            <li className='biography-autor-phrase' key={`${author.nomeCompleto}-frase-${i}`}>{frase}</li>
+          ))}
+        </ul>
 
-          <p>{selectedAuthor.contextoDasFrases}</p>
-          <button onClick={closeModal}>Fechar</button>
-        </section>
-    </Modal>
-    )}
+        <p>{author.contextoDasFrases}</p>
+      </section>
+    </div>
 </div>
 
 )

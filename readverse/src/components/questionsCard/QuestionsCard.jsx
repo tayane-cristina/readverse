@@ -80,7 +80,7 @@ const QuestionsCard = ({ listQuestions, sizeList, quizTheme }) => {
     }, [quizFinished, score, finishQuiz]);
 
     return (
-        <div className='section-container-question'>
+        <div className='div-container section-container-questions'>
             {!quizFinished ? (
                 <ul className='questions-ul-container'>
                     <p className='question'>Pergunta {currentQuestion + 1}/{sizeList} - {sortedQuestions[currentQuestion]?.ask}</p>
@@ -93,6 +93,7 @@ const QuestionsCard = ({ listQuestions, sizeList, quizTheme }) => {
                                 fontWeight: selectedOption === opt ? "bold" : "normal",
                                 cursor: isAnswared ? "not-allowed" : "pointer",
                                 color: isAnswared ? "gray" : "black",
+                                backgroundColor: isAnswared ? "lightgray" : "darkorange"
                             }}
                         >
                             <p className='options'>{opt}</p>
@@ -100,16 +101,16 @@ const QuestionsCard = ({ listQuestions, sizeList, quizTheme }) => {
                     ))}
                     <p className='feedback'>{feedback}</p>
                     <p className='explain' style={{ textAlign: "center" }}>{explain}</p>
-                    <button className='btn-primary' onClick={nextQuestion}>Próxima</button>
-                    <Link className='give-up-btn' to='/'>Sair</Link>
+                    <button className='btn-quiz-next' onClick={nextQuestion}>Próxima</button>
+                    <Link className='give-up-btn' to='/menuquiz'>Sair</Link>
                 </ul>
             ) : (
                 <div className='section-finaly-container'>
                     <p><strong>Quiz finalizado!</strong></p>
                     <p>Seu score é de <strong>{score}/100</strong></p>
-                    <p>{resultMessage}</p>
+                    <p className='result-message'>{resultMessage}</p>
                     <section className='btn-finaly-page'>
-                        <button className='btn-secondary' onClick={() => reset()}>Tentar novamente</button>
+                        <button className='btn-quiz-reset' onClick={() => reset()}>Tentar novamente</button>
                         <Link to='/menuquiz' className='btn-light'>Voltar à página inicial</Link>
                     </section>
                 </div>

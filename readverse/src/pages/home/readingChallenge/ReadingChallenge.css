@@ -1,5 +1,5 @@
 .readingChallenge{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,52 +15,42 @@
     text-transform: capitalize;
 }
 
-.readingChallenge-section-lists{
-    height: 80%;
+.readingChallenge-section{
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+
 }
 
-.readingChallenge-primary-list, .readingChallenge-second-list{
+.readingChallenge-list{
     height: 100%;
-    width: 30%;
+    width: 30rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-around;
 }
 
-.readingChallenge-primary-list li, .readingChallenge-second-list li{
-    padding: 2rem;
+.readingChallenge-list li{
+    margin: 10px;
     height: 10rem;
-    width: 10rem;
+    width: 95%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
-    font-size: 19px;
     transition: 0.2s;
-    border: 3px solid white;
+    border-radius: 50%;
 }
 
-.impar{
-    align-self: flex-start;
-    border-radius: 80% 40%;
-}
-
-.par{
-    align-self: flex-end;
-    border-radius: 40% 80%;
-}
-
-.impar:hover, .par:hover{
-    background-color: white;
-    border-color: var(--secondary-color);
+.readingChallenge-list li p{
+    font-weight: bold;
+    font-size: 22px;
 }
 
 .challenge{
@@ -68,29 +58,42 @@
     font-weight: bold;
 }
 
-.color1{
-    background-color: lightcoral;
+.color1:hover {
+    background-color: white;
+    background-image: url(../../../assets/icons/desafio1.png);
+    background-size: 10%;
+    opacity: 0,02;
 }
 
-.color2{
-background-color: lightgreen;
+.color2:hover {
+    background-image: url(../../../assets/icons/desafio2.png);
+    background-size: 10%;
 }
 
-.color3 {
-background-color: lightskyblue;
+.color3:hover {
+    background-image: url(../../../assets/icons/desafio3.png);
+    background-size: 10%;
 }
 
-.color4 {
-background-color: orchid;
+.color4:hover {
+    background-image: url(../../../assets/icons/desafio4.png);
+    background-size: 10%;
 }
 
-.color5 {
-    background-color: lightsalmon;
+.color5:hover {
+    background-image: url(../../../assets/icons/desafio5.png);
+    background-size: 10%;
 }
 
-.color6{
-background-color: lightseagreen;
+.color6:hover {
+    background-image: url(../../../assets/icons/desafio6.png);
+    background-size: 10%;
 }
+
+.challenge-icon {
+
+}
+
 
 
 

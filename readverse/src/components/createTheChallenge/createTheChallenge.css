@@ -1,5 +1,17 @@
+.invitation-to-challenge {
+    margin-top: 6rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    line-height: 1.4;
+    height: 15rem;
+    font-size: 19px;
+}
+
 .create-challenge-list{
-    background-color: turquoise;
     width: 1005;
     display: flex;
     flex-direction: column;
@@ -8,25 +20,29 @@
 }
 
 .create-challenge-item{
+    padding: 1rem;
+    margin: 20px;
+    background-color: rgba(73, 73, 73, 0.082);
+    border-radius: 10px;
+}
+
+.par-challenge {
+    width: 70%;
+    align-self: flex-start;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 2rem;
-  
 }
 
-.par-arg {
-    background-color: rgb(250, 171, 0);
-    width: 70%;
-    align-self: flex-start;
-}
-
-.impar-arg{
-    border: 5px solid darkmagenta;
+.impar-challenge{
     border-radius: 10px;
     width: 70%;
     align-self: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .create-challenge-infor{
@@ -34,7 +50,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: plum;
     height: 15rem;
     width: 70%;
     padding: 10px;

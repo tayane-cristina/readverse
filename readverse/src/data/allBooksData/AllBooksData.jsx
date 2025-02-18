@@ -292,7 +292,7 @@ export const AllBooksData = [
         "title": "O Leão e o Pássaro",
         "autor": "Marjane Satrapi",
         "cover": oLeaoEOPassaro,
-        "description": "Uma autobiografia gráfica que narra as transformações culturais do Irã através da Revolução Islâmica."
+        "description": "O Leão e o Pássaro é uma história poética sobre amizade, saudade e ciclos da vida, contada com delicadeza e belas ilustrações."
     },
     {
         "title": "Shantaram",

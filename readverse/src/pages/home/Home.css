@@ -1,11 +1,38 @@
-.home {
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%; 
+/*Estilo para telas menores*/
 
-    background-color: rgba(255, 94, 0, 0.897);
+
+.cover-intro {
+    width: 250px;
+    height: 450px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ESTILOS DA SEÇÃO DE QUIZ*/
 .quiz-way{
     height: 40vh;
     display: grid;

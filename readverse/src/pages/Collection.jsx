@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import './Collection.css';
+import noImage from '../assets/bookCovers/indisponivel.png';
 
 const Collection = () => {
 
@@ -48,34 +50,37 @@ const Collection = () => {
 
 
     return(
-    <div>
-        <select name="literaryGenres" id="literaryGenres" onChange={(e) => setQuery(e.target.value)}>
-            <option value="">Selecione um estilo literário</option>
-            <option value="romance">Romance</option>
-            <option value="ficcao">Ficção Científica</option>
-            <option value="fantasia">Fantasia</option>
-            <option value="suspense">Suspense</option>
-            <option value="terror">Terror</option>
-            <option value="biografia">Biografia</option>
-            <option value="autobiografia">Autobiografia</option>
-            <option value="historico">Histórico</option>
-            <option value="poesia">Poesia</option>
-            <option value="drama">Drama</option>
-            <option value="autoajuda">Autoajuda</option>
-            <option value="aventura">Aventura</option>
-            <option value="infantil">Infantil</option>
-            <option value="jovemAdulto">Jovem Adulto</option>
-            <option value="religioso">Religioso</option>
-        </select>
+    <div className='collection'>
+        <div className='collection-search-section'>
+            <select className='collection-header' name="literaryGenres" id="literaryGenres" onChange={(e) => setQuery(e.target.value)}>
+                <option value="">Selecione um estilo literário</option>
+                <option value="romance">Romance</option>
+                <option value="ficcao">Ficção Científica</option>
+                <option value="fantasia">Fantasia</option>
+                <option value="suspense">Suspense</option>
+                <option value="terror">Terror</option>
+                <option value="biografia">Biografia</option>
+                <option value="autobiografia">Autobiografia</option>
+                <option value="historico">Histórico</option>
+                <option value="poesia">Poesia</option>
+                <option value="drama">Drama</option>
+                <option value="autoajuda">Autoajuda</option>
+                <option value="aventura">Aventura</option>
+                <option value="infantil">Infantil</option>
+                <option value="jovemAdulto">Jovem Adulto</option>
+                <option value="religioso">Religioso</option>
+            </select>
 
-        <input
-            type="text"
-            placeholder="Digite o título ou autor"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-        />
+            <input
+                type="text"
+                placeholder="Digite o título ou autor"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+            />
 
-        <button onClick={() => fetchBooks(query)}>Buscar</button>
+            <button onClick={() => fetchBooks(query)}>Buscar</button>
+        </div>
+
 
         <ul className='list-of-books'>
             {bookList.map((book, index) => (
@@ -87,12 +92,16 @@ const Collection = () => {
                             style={{ width: "100px", height: "auto" }}
                         />
                         ) : (
-                        <p>Sem imagem disponível</p>
+                        <img  
+                         src={noImage} 
+                         alt='icone-sem-imagem-disponivel' 
+                         style={{ width: "100px", height: "auto" }}
+                        />
                         )}
                     <p><strong>{book.volumeInfo.title}</strong></p>
-                    <p>Data de lançamento: {(book.volumeInfo.publishedDate)}</p>
-                    <p>Autor: {book.volumeInfo.authors?.join(", ")}</p>
-                    <p>Editora: {book.volumeInfo.publisher}</p>
+                    <p><strong>Publicado em:</strong> {(book.volumeInfo.publishedDate)}</p>
+                    <p><strong>Autor:</strong> {book.volumeInfo.authors?.join(", ")}</p>
+                    <p><strong>Editora:</strong> {book.volumeInfo.publisher}</p>
                 </li>
             ))}
         </ul>

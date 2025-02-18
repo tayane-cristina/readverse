@@ -1,5 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+/*
+  OS PRINCIPAIS ESTILOS GLOBAIS DESSE PROJETO SÃO 
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%; 
+    max-width: 1200px; 
+*/
 
 
 //Rotas
@@ -13,7 +21,7 @@ import Alphabet from './pages/readChallengesPages/Alphabet'
 import AroundTheWorld from './pages/readChallengesPages/AroundTheWorld';
 import ForDecades from './pages/readChallengesPages/ForDecades'
 import MenuQuiz from './pages/quiz/MenuQuiz';
-import  GuessBookQuiz  from './pages/quiz/GuessBookQuiz.jsx';
+import GuessBookQuiz  from './pages/quiz/GuessBookQuiz.jsx';
 import HorrorFansQuiz from './pages/quiz/HorrorFansQuiz.jsx';
 import ClassicFansQuiz from './pages/quiz/ClassicFansQuiz.jsx';
 import AdventureFansQuiz from './pages/quiz/AdventureFansQuiz.jsx';
@@ -21,15 +29,36 @@ import FictionsFansQuiz from './pages/quiz/FictionsFansQuiz.jsx';
 import RomanceFansQuiz from './pages/quiz/RomanceFansQuiz.jsx';
 import Authors from './components/header/authors/Authors.jsx';
 import About from './pages/about/About.jsx';
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "./components/theme/GlobalStyles.jsx"
+import { lightTheme, darkTheme } from './components/theme/Theme.jsx'; 
+import { useState } from 'react';
 function App() {
 
-  return (
-    <BrowserRouter>
+  const [isNightMode, setIsNightMode] = useState(false);
 
-      <Header />
+  useEffect(() => {
+    const saveMode = localStorage.getItem("NightMode");
+    if (saveMode === 'true') {
+      setIsNightMode(saveMode)
+    }
+  }, [])
+
+  const toggleNightMode = () => {
+    const newMode = !isNightMode;
+    setIsNightMode(newMode)
+    localStorage.setItem('nightMode', newMode)
+}
+
+  return (
+    <ThemeProvider theme={isNightMode ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <BrowserRouter>
+
+      <Header toggleNightMode={toggleNightMode} isNightMode={isNightMode} />
       <Routes>
         {/*Rotas do navbar*/}
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/' element={<Home toggleNightMode={toggleNightMode} isNightMode={isNightMode}/>}></Route>
         <Route path='/authors' element={<Authors />}></Route>
         <Route path='/collection' element={<Collection />}></Route>.
         <Route path='/about' element={<About />}></Route>
@@ -52,7 +81,9 @@ function App() {
         <Route path='/fictionsfansquiz' element={<FictionsFansQuiz />}></Route>
         <Route path='/romancefansquiz' element={<RomanceFansQuiz />}></Route>
       </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ThemeProvider>
+    
   )
 }
 

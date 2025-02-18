@@ -1,22 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import './Header.css'
+import MenuLink from '../isActive/MenuLink';
+import NightMode from '../isActive/NightMode';
 
-const Header = () => {
+const Header = ({toggleNightMode, isNightMode}) => {
 
 
     return(
     <div className='header'>
+
+        <NightMode toggleNightMode={toggleNightMode} isNightMode={isNightMode} />
+
         <h2><Link to='/' className='logo'>ReadVerse</Link></h2>
 
         <nav>
-            <ul>
-                <li><Link to='/collection'>Biblioteca Online</Link></li>
-                <li><Link to="/authors">Autores</Link></li>
-                <li><Link to="/menuquiz">Quiz</Link></li>
-                <li><Link to="/about">Sobre</Link></li>
-            </ul>
+            <MenuLink className="header-navlink" to="/" label="Home" />
+            <MenuLink className="header-navlink" to='/collection' label="Biblioteca Online"/>
+            <MenuLink className="header-navlink" to="/authors" label="Autores"/>
+            <MenuLink className="header-navlink" to="/menuquiz" label="Quiz"/>
+            <MenuLink className="header-navlink" to="/about" label="Sobre"/>
         </nav>
+
     </div>
     )
 }

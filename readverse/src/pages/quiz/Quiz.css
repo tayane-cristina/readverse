@@ -1,0 +1,164 @@
+.quiz section{
+    margin-top: 6rem;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.quiz section p{
+    font-size: 19px;
+    text-align: center;
+    width: 70%;
+    line-height: 1.4;
+    padding: 10px;
+}
+
+.quiz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height:85vh;
+}
+
+
+
+.quiz-ul-cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-item{
+    height: 13rem;
+    width: 17rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(128, 128, 128, 0.158);
+}
+
+.card-item p{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.categorie-quiz-icon {
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+    background-color: rgb(86, 5, 133);
+    border-radius: 50%;
+    align-self: center;
+}
+
+.link-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    color: rgba(3, 3, 3, 0.568);
+}
+
+
+/*Estilos do card*/
+.section-container-questions{
+    margin-top: 5rem;
+    min-height: 45vh;
+}
+
+/*ul que guarda a lista de opções*/
+.questions-ul-container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.question{
+    font-size: 20px;
+    text-align: center;
+}
+
+/*Opção de resposta*/
+.options-li{
+    height: 3rem;
+    min-width: 40rem;
+    border-radius: 10px;
+}
+
+.options-li p{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+}
+
+
+.btn-quiz-next{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid rgb(133, 118, 118);
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-quiz-next:hover {
+    background-color: rgba(128, 128, 128, 0.39);
+}
+
+.btn-quiz-reset {
+    background-color: lightgray;
+    padding: 10px;
+    font-size: 17px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.btn-quiz-reset:hover {
+    background-color: rgba(128, 128, 128, 0.199);
+}
+
+.feedback {
+    font-weight: bold;
+}
+
+/*Quiz finalizado*/
+.section-finaly-container{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-finaly-container p {
+    font-size: 20px;
+}
+
+.result-message {
+    width: 70%;
+    text-align: center;
+}
+

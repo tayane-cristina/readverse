@@ -33,16 +33,6 @@
     border-radius: 10px;
 }
 
-.benefit-item:hover {
-    background-color: var(--secondary-color);
-    cursor: pointer;
-}
-
-.benefit-item:hover .subtitle,
-.benefit-item:hover .benefit-text{
-    color: white;
-}
-
 .impar-arg{
     align-self: flex-start;
 }

@@ -1,68 +1,108 @@
 .authors{
-    height: 100vh;
-    width: 70vw;
-    margin: 0 auto;
+    min-height: 100vh;
+    width: 100vw;
     padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.authors aside {
+    width: 20%;
+    height: 100%;
 }
 
 .authors h2{
     text-align: center;
     font-size: 2rem;
+    padding: 10px;
     text-transform: capitalize;
+    color: darkslateblue;
 }
 
 .authors-list {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: baseline;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
 }
 
 .authors-li {
-    width: 20rem;
-    height: 25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px;
-    background-color: rgba(128, 128, 128, 0.068);
-    padding: 1rem;
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    text-align: baseline;
     border-radius: 5px;
+    cursor: pointer;
+    border-left: inherit;
+}
+
+.authors-li:hover {
+    color: rgb(74, 1, 192);
 }
 
 .authors-li p{
-    text-align: center;
+    text-align: baseline;
     font-size: 18px;
 }
 
 .authors-li button{
-    background-color: rgba(6, 154, 240, 0.822);
     color: white;
 }
 
-.author-image {
-    width: 220px;
-    height: 240px;
-    border-radius: 50%;
+.biography-display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 75%;
+    background-color: rgba(169, 169, 169, 0.055);
+}
 
+.biography-cover-section{
+    width: 20%;
+    align-self: baseline;
+}
+
+.biography-infor-section{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 1rem;
+
+}
+
+.biography-infor-section p {
+    font-size: 22px;
+    margin: 10px;
+
+}
+
+.biography-autor-image {
+    width: 300px;
+    height: 350px;
+    border-radius: 1rem;
     padding: 10px;
 }
 
-/*Estilos do modal*/
-.authors-modal-image{
-    width: 20%;
-    height: 100%;
-    background-color: aqua;
+.biography-autor-phrase {
+    font-size: 22px;
+    list-style: inside;
 }
 
-.authors-modal-image img{
-    width: 350px;
-    height: 350px;
+.biography-autor-book {
+    font-size: 22px;
+    list-style: inside;
 }
 
-.authors-modal-infor{
-    width: 60%;
-}
+
+

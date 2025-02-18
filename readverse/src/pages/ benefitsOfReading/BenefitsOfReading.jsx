@@ -40,13 +40,6 @@ return(
                     mostram  que isso melhora as relações sociais e a compreensão do próximo.
                 </p>
             </li>
-            <li className='benefit-item par-arg'>
-                <p className='subtitle'><strong>A Leitura Reduz os Riscos de Declínio Cognitivo.</strong></p>
-                <p className='benefit-text'>
-                    Estudos da Neurology Journal indicam que a leitura regular reduz o risco de 
-                    declínio cognitivo, ajudando a manter o cérebro ativo e saudável na velhice.
-                </p>
-            </li>
         </ul>
 
         <div className='books-sorted-div'>

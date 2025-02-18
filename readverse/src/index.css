@@ -1,16 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Twinkle+Star&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
-    --primary-color: rgb(115, 7, 179);
-    --secondary-color: #cc6504;;
-    --text-color: gray;
+    --primary-color: #680091;
+    --secondary-color: rgb(189, 82, 235);
+    --text-color: rgb(68, 67, 67);
     --color-default: #f9f9f9; 
+
+    --primary-color-dark: rgb(33, 0, 65);
+    --secondary-color-dark: purple; 
+    --text-color-dark: rgba(128, 128, 128, 0.507);
+}
+
+.enabled-link {
+    border-bottom: 2px solid var(--secondary-color);
+
+}
+
+.disabled-link{
+    background-color: inherit;
 }
 
 body{
     font-family: arial;
+}
+
+.fixed {
+    position: static;
 }
 
 .left-arrow{
@@ -46,27 +61,6 @@ body{
 
 h1, h2, h3,h4, h5, h6{
     font-weight: bold;
-}
-
-.principal-div{
-    margin: 0 auto;
-    padding: 3rem;
-    width: 100%; 
-    max-width: 1200px; 
-    box-sizing: border-box;
-    background-color: #f9f9f9; 
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.div-container{
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%; 
-    max-width: 1200px; 
-    box-sizing: border-box;
-    background-color: #ffffff; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 html{
@@ -136,5 +130,9 @@ li {
 .seeMore-btn{
     align-self: center;
     
+}
+
+.lamp {
+    cursor: pointer;
 }
 
