@@ -1,35 +1,43 @@
 /* Estilos base (Aplicados a todos os tamanhos de tela) */
-.home-introduce-container {
+.home-introduce {
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    background-color: brown;
+    width: 100vw;
     font-family: "Montserrat", serif;
 }
+
 
 .section-principal-text {
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: center;
-    padding: 2rem;
+    background-color: aqua;
 }
 
 .home-intro-principalText {
-    color: rgb(8, 8, 8);
     font-weight: bold;
     text-transform: capitalize;
+    font-size: 2px;
+    background-color: crimson;
+    width: 100%;
 }
 
 .home-intro-gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 1rem;
+    padding: 0.5rem;
+    background-color: springgreen;
 }
 
 .cover-gallery {
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
 }
 
 /* Classes específicas para posicionamento das imagens */
@@ -112,8 +120,9 @@
 
 /* 4. Estilos para desktop (1026px - 1920px) */
 @media screen and (min-width: 1025px) and (max-width: 1920px) { 
-    .home-introduce-container {
+    .home-introduce {
         justify-content: space-around;
+        align-items: center;
     }
 
     .section-principal-text {

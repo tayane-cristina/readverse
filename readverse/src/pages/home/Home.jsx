@@ -7,12 +7,13 @@ import './Home.css'
 import HomeIntroduce from './homeIntroduce/HomeIntroduce';
 
 
-const Home = ({isNightMode, toggleNightMode}) => {
+const Home = () => {
 
 return(
 <div className='home'>
 
     <HomeIntroduce />
+    <div style={{ height: "110vh" }}></div> {/* Espaço forçado */}
     <BenefitsOfReading />
   {/*
     <ReadingChallenge />

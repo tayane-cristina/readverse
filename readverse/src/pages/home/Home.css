@@ -1,17 +1,10 @@
 /*Estilo para telas menores*/
-
-
-.cover-intro {
-    width: 250px;
-    height: 450px;
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10rem;
 }
-
-
-
-
-
-
-
 
 
 

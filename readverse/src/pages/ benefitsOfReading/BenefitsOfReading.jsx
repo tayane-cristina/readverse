@@ -3,6 +3,10 @@ import { useState } from 'react';
 import { AllBooksData } from '../../data/allBooksData/AllBooksData';
 import './BenefitsOfReading.css';
 import notbook from '../../assets/icons/book.gif'
+import empatyImg from '../../assets/icons/empatia.png'
+import heartImg from '../../assets/icons/coracao.png'
+import brainImg from '../../assets/icons/cerebro.png'
+
 
 const BenefitsOfReading = () => {
 
@@ -20,6 +24,7 @@ return(
     <div className='BenefitsOfReading'>
         <ul className='benefits-list'>
             <li className='benefit-item impar-arg'>
+                <img className='benefit-reading-cover' src={brainImg} alt='icone-de-cerebro' />
                 <p className='subtitle'><strong>Ler Estimula o Cérebro Como um Exercício</strong></p>
                 <p className='benefit-text'>
                     Ler regularmente melhora a comunicatividade cerebral e fortalece habilidades como 
@@ -27,6 +32,7 @@ return(
                 </p>
             </li>
             <li className='benefit-item par-arg'>
+                <img className='benefit-reading-cover' src={heartImg} alt='icone-de-coracao' />
                 <p className='subtitle'><strong>Leitura e o Relaxamento</strong></p>
                 <p className='benefit-text'>
                     A leitura reduz o estresse em até 68%, conforme a Journal of Psychiatric Research. 
@@ -34,6 +40,7 @@ return(
                 </p>
             </li>
             <li className='benefit-item impar-arg'>
+                <img className='benefit-reading-cover' src={empatyImg} alt='icone-de-coracao-entre-maos' />
                 <p className='subtitle'><strong>Ler Nos Torna Mais Empáticos.</strong></p>
                 <p className='benefit-text'>
                     Ler histórias aumenta a empatia, pois nos conecta com as emoções dos personagens. Pesquisas 
