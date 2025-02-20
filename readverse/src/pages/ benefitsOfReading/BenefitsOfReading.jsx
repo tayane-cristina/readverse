@@ -50,7 +50,7 @@ return(
         </ul>
 
         <div className='books-sorted-div'>
-            <h2>Em dúvida sobre o que ler no momento? clique no botão abaixo e sorteie seu próximo livro!</h2>
+            <h2 className='benefitsOfReading-h2'>Em dúvida sobre o que ler no momento? clique no botão abaixo e sorteie seu próximo livro!</h2>
             {sortedBook && AllBooksData[sortedBook] ? (
              <div className='book-sorted-display'>
                 <p><strong>{AllBooksData[sortedBook].title}</strong></p>
@@ -61,11 +61,11 @@ return(
                 alt={`${AllBooksData[sortedBook].title}-image`}
                 />
                 <p className='book-sorted-description' ><strong>Descrição: </strong>{AllBooksData[sortedBook].description}</p>
-                </div>
+            </div>
                 ) : (
-                <div className='not-book-sorted'>
-                    <img className='not-book' src={notbook} alt='book-image'></img>
-                </div>
+            <div className='not-book-sorted'>
+                <img className='not-book' src={notbook} alt='book-image'></img>
+            </div>
             )}
             <button className='sort-btn' onClick={sortBook}>Sortear</button>
         </div>

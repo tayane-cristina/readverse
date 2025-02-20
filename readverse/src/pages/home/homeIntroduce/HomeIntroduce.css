@@ -1,150 +1,120 @@
 /* Estilos base (Aplicados a todos os tamanhos de tela) */
+.content {
+    padding-top: 15rem; /*O padding top do content deve ter o mesmo tamanho do height do header no tamanho da media scream*/
+}
+
 .home-introduce {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: brown;
+    height: 100vh;
     width: 100vw;
-    font-family: "Montserrat", serif;
-}
-
-
-.section-principal-text {
     display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: center;
-    background-color: aqua;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.home-intro-principalText {
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size: 2px;
-    background-color: crimson;
+.home-intro-principalText{
+    height: 100%;
     width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 4.5rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Shadows Into Light Two", serif;
+    padding: 2rem;
 }
 
-.home-intro-gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0.5rem;
-    background-color: springgreen;
+.home-intro-gallery{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 100%;
 }
 
-.cover-gallery {
-    border-radius: 10px;
-    margin: 10px;
+.cover-gallery{
+    display: grid;
+    width: 70%;
+    height: 80%;
+    padding: 2rem;
 }
 
 /* Classes específicas para posicionamento das imagens */
-.cover-one {
-    align-self: baseline;
-}
 
-.cover-two {
-    align-self: end;
-}
-
-.cover-three {
-    align-items: baseline;
-}
 
 /* 1. Estilos para celulares pequenos (320px - 590px) */
-@media screen and (min-width: 320px) and (max-width: 590px) { 
-    .section-principal-text {
-        margin-top: 12rem;
-    }
-
-    .home-intro-principalText {
-        font-size: 3rem;
-        width: 60%;
-    }
-
-    .home-intro-gallery {
-        margin-top: 18rem;
-        width: 40%;
-    }
+@media screen and (min-width: 320px) and (max-width: 750px) { 
 
     .cover-gallery {
-        width: 140px;
-        height: 150px;
+        height: 85%;
     }
+
 }
 
 /* 2. Estilos para tablet (591px - 750px) */
 @media screen and (min-width: 591px) and (max-width: 750px) {
-    .section-principal-text {
-        margin-top: 16rem;
+
+    .home-intro-principalText{
+        font-size: 5rem;
+
     }
 
-    .home-intro-principalText {
-        font-size: 3.5rem;
+    .cover-gallery{
+        width: 70%;
+        height: 90%;
     }
 
-    .home-intro-gallery {
-        margin-top: 20rem;
-        width: 40%;
-    }
-
-    .cover-gallery {
-        width: 150px;
-        height: 180px;
-    }
 }
 
 /* 3. Estilos para notebook (751px - 1024px) */
-@media screen and (min-width: 751px) and (max-width: 1024px) { 
-    .section-principal-text {
-        margin-top: 6rem;
+@media screen and (min-width: 751px) and (max-width: 1554px) {
+    .content {
+        padding-top: 3.5rem;
+    }
+    
+    .home-introduce{
+        display: flex;
+        flex-direction: row;
+        
     }
 
     .home-intro-principalText {
-        font-size: 4rem;
+        font-size: 6rem;
+        width: 100%;
+      
     }
 
-    .home-intro-gallery {
-        margin-top: 12rem;
-        width: 40%;
-        height: 100%;
+
+    .cover-gallery{
+        height: 33rem;
+        width: 33rem;
     }
 
-    .cover-gallery {
-        width: 150px;
-        height: 180px;
-    }
 }
 
 /* 4. Estilos para desktop (1026px - 1920px) */
-@media screen and (min-width: 1025px) and (max-width: 1920px) { 
+@media screen and (min-width: 1555px) and (max-width: 1920px) { 
+    .content {
+        padding-top: 4rem;
+    }
+
     .home-introduce {
-        justify-content: space-around;
-        align-items: center;
+        display: flex;
+        flex-direction: row;
     }
 
-    .section-principal-text {
-        margin-top: 3rem;
-        width: 40%;
+    .home-intro-gallery{
+        height: 100%;
     }
 
-    .home-intro-principalText {
-        font-size: 5rem;
-        text-align: center;
-    }
-
-    .home-intro-gallery {
-        margin-top: 3rem;
-        flex-direction: column;
-        width: 30%;
-        padding: 3rem;
+    .home-intro-principalText{
+        height: 100%;
+        font-size: 8rem;
     }
 
     .cover-gallery {
-        width: 230px;
-        height: 250px;
-        margin: 10px;
+        height: 45rem;
+        width: 45rem;
     }
+
 }

@@ -13,7 +13,6 @@ return(
 <div className='home'>
 
     <HomeIntroduce />
-    <div style={{ height: "110vh" }}></div> {/* Espaço forçado */}
     <BenefitsOfReading />
   {/*
     <ReadingChallenge />

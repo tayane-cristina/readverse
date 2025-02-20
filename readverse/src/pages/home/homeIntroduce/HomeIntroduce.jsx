@@ -1,23 +1,28 @@
 import React from 'react';
 import './HomeIntroduce.css';
 import WobbleImage from '../../../components/aniamtions/WoobleImage';
-import coverOne from '../../../assets/icons/cover-one.jpg';
-import coverTwo from '../../../assets/icons/cover-two.jpg';
-import coverThree from '../../../assets/icons/cover-three.jpg';
+import womamReading from '../../../assets/icons/woman-reading.png';
+import manReading from '../../../assets/icons/man-reading.png';
+import { useState } from 'react';
 
 
 const HomeIntroduce = () => {
+
+  const [isActive, setIsActive] = useState(true)
+
+  const togglerActive = () => {
+    setIsActive(!isActive)
+  }
+
   return (
     <div className='home-introduce'>
-        <section className='section-principal-text'>
-          <p className='home-intro-principalText'><span className='special-word'>Readverse</span> um mundo de literatura feito pra você</p>
-        </section>
+    
+        <h2 className='home-intro-principalText'>um mundo de literatura feito pra você</h2>
 
         <section className='home-intro-gallery'>
-          <WobbleImage imageAdress={coverOne} nameClass="cover-gallery cover-one" />
-          <WobbleImage imageAdress={coverTwo} nameClass="cover-gallery cover-two" />
-          <WobbleImage imageAdress={coverThree} nameClass="cover-gallery cover-three" />
+          <WobbleImage imageAdress={isActive ?  womamReading : manReading } handleClick={togglerActive} nameClass="cover-gallery" />
         </section>
+
     </div>
   );
 };

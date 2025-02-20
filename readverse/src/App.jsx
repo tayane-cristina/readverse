@@ -54,33 +54,36 @@ function App() {
     <ThemeProvider theme={isNightMode ? darkTheme : lightTheme}>
       <GlobalStyle />
       <BrowserRouter>
-
       <Header toggleNightMode={toggleNightMode} isNightMode={isNightMode} />
-      <Routes>
-        {/*Rotas do navbar*/}
-        <Route path='/' element={<Home toggleNightMode={toggleNightMode} isNightMode={isNightMode}/>}></Route>
-        <Route path='/authors' element={<Authors />}></Route>
-        <Route path='/collection' element={<Collection />}></Route>.
-        <Route path='/about' element={<About />}></Route>
+
+      <div className='content'>
+        <Routes>
+          {/*Rotas do navbar*/}
+          <Route path='/' element={<Home toggleNightMode={toggleNightMode} isNightMode={isNightMode}/>}></Route>
+          <Route path='/authors' element={<Authors />}></Route>
+          <Route path='/collection' element={<Collection />}></Route>.
+          <Route path='/about' element={<About />}></Route>
 
 
-        {/*Rotas para as páginas de desafios literários*/}
-        <Route path='/twelvebooksfor' element={<TwelveBooksFor />}></Route>
-        <Route path='/thirtybeforethirty' element={<ThirtyBeforeThirty />}></Route>
-        <Route path='/adaptedforfilm' element={<AdaptedForFilm />}></Route>
-        <Route path='/alphabet' element={<Alphabet />}></Route>
-        <Route path='/aroundtheworld' element={<AroundTheWorld />}></Route>
-        <Route path='/fordecade' element={<ForDecades />}></Route>
+          {/*Rotas para as páginas de desafios literários*/}
+          <Route path='/twelvebooksfor' element={<TwelveBooksFor />}></Route>
+          <Route path='/thirtybeforethirty' element={<ThirtyBeforeThirty />}></Route>
+          <Route path='/adaptedforfilm' element={<AdaptedForFilm />}></Route>
+          <Route path='/alphabet' element={<Alphabet />}></Route>
+          <Route path='/aroundtheworld' element={<AroundTheWorld />}></Route>
+          <Route path='/fordecade' element={<ForDecades />}></Route>
 
-        {/*Rotas para o quiz*/}
-        <Route path='/menuquiz' element={<MenuQuiz />} ></Route>
-        <Route path='/guessbookquiz' element={<GuessBookQuiz />}></Route>
-        <Route path='/horrorfansquiz' element={<HorrorFansQuiz />}></Route>
-        <Route path='/classicfansquiz' element={<ClassicFansQuiz />}></Route>
-        <Route path='/adventurefansquiz' element={<AdventureFansQuiz />}></Route>
-        <Route path='/fictionsfansquiz' element={<FictionsFansQuiz />}></Route>
-        <Route path='/romancefansquiz' element={<RomanceFansQuiz />}></Route>
-      </Routes>
+          {/*Rotas para o quiz*/}
+          <Route path='/menuquiz' element={<MenuQuiz />} ></Route>
+          <Route path='/guessbookquiz' element={<GuessBookQuiz />}></Route>
+          <Route path='/horrorfansquiz' element={<HorrorFansQuiz />}></Route>
+          <Route path='/classicfansquiz' element={<ClassicFansQuiz />}></Route>
+          <Route path='/adventurefansquiz' element={<AdventureFansQuiz />}></Route>
+          <Route path='/fictionsfansquiz' element={<FictionsFansQuiz />}></Route>
+          <Route path='/romancefansquiz' element={<RomanceFansQuiz />}></Route>
+        </Routes>
+      </div>
+      
       </BrowserRouter>
     </ThemeProvider>
     
