@@ -1,0 +1,98 @@
+/* Estilos base (Aplicados a todos os tamanhos de tela) */
+.content {
+    padding-top: 15rem; /*O padding top do content deve ter o mesmo tamanho do height do header no tamanho da media scream*/
+}
+
+.home-introduce {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-intro-principalText{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 4.5rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Shadows Into Light Two", serif;
+    padding: 2rem;
+}
+
+.home-intro-gallery{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.cover-gallery{
+    display: grid;
+    width: 70%;
+    height: 80%;
+    padding: 2rem;
+}
+
+/* Classes específicas para posicionamento das imagens */
+
+
+/* 1. Estilos para celulares pequenos (320px - 590px) */
+@media screen and (min-width: 320px) and (max-width: 750px) { 
+
+    .cover-gallery {
+        height: 85%;
+    }
+}
+
+/* 3. Estilos para notebook (751px - 1024px) */
+@media screen and (min-width: 751px) and (max-width: 1554px) {
+
+    .content {
+        padding-top: 3.5rem;
+    }
+
+    .home-intro-principalText {
+        font-size: 7.5rem;
+        width: 100%;
+    }
+
+
+    .cover-gallery{
+        height: 33rem;
+        width: 40rem;
+    }
+
+}
+
+/* 4. Estilos para desktop (1026px - 1920px) */
+@media screen and (min-width: 1555px) and (max-width: 1920px) { 
+    .content {
+        padding-top: 4rem;
+    }
+
+    .home-introduce {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .home-intro-gallery{
+        height: 100%;
+    }
+
+    .home-intro-principalText{
+        height: 100%;
+        font-size: 8rem;
+    }
+
+    .cover-gallery {
+        height: 45rem;
+        width: 45rem;
+    }
+
+}
