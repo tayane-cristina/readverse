@@ -1,6 +1,7 @@
 /* Estilos para telas menores (até 768px) */
 /* 📱 Mobile pequeno (até 480px) */
     .BenefitsOfReading {
+        margin-top: 5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -8,6 +9,8 @@
         font-family: "Shadows Into Light Two", serif;
         height: auto;
         padding: 1rem;
+        width: 100vw;
+        font-size: 1.5em;
     }
 
     .benefits-list {
@@ -21,15 +24,14 @@
 
     .benefit-item {
         margin-top: 2rem;
-        padding: 1rem;
-        font-size: 22px;
+        padding: 2rem;
         font-weight: 600;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
     }
 
     .subtitle{
-        color: rgb(31, 128, 128);
+        color: rgb(7, 182, 182);
         font-weight: bold;
     }
 
@@ -54,7 +56,6 @@
         align-items: center;
         justify-content: space-around;
         text-align: center;
-        font-size: 24px;
         padding: 1rem;
         margin: 1rem;
         font-weight: bold;
@@ -63,6 +64,8 @@
     .book-sorted-cover{
         width: 350px;
         height: 450px;
+        padding: 2rem;
+        border-radius: 5px;
     }
 
 
@@ -78,10 +81,11 @@
         width: 350px;
         height: 450px;
         margin: 1rem;
+        border-radius: 5px;
     }
 
     .benefit-reading-cover{
-        margin: 2rem;
+        margin: 0.5rem;
         width: 50px;
         height: 50px;
     }
@@ -91,14 +95,13 @@
     .sort-btn {
         background-color: #007bff; /* Azul padrão */
         color: #ffffff;
-        font-size: 1rem;
         font-weight: bold;
         padding: 12px 24px;
         border: none;
         border-radius: 8px;
         cursor: pointer;
         transition: 0.3s ease, transform 0.2s ease;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     
     
@@ -112,7 +115,11 @@
   /* 📱📲 Celulares (480px até 768px) */
   @media (min-width: 481px) and (max-width: 768px) {
     .BenefitsOfReading {
-        background-color: lightgreen;
+        font-size: 2em;
+    }
+
+    .sort-btn {
+        padding: 12px 32px;
     }
 
 
@@ -121,14 +128,103 @@
   /* 💻 Tablets e telas médias (768px até 1024px) */
   @media (min-width: 769px) and (max-width: 1024px) {
     .BenefitsOfReading {
-        background-color: rgb(45, 165, 245);
+        font-size: 2.5em;
     }
+
+    .sort-btn {
+        padding: 24px 40px;
+        font-size: 20px;
+    }
+
+
   }
   
   /* 🖥️ Telas grandes e desktops (acima de 1024px) */
-  @media (min-width: 1025px) {
+  @media (min-width: 1025px) and (max-width: 1440px)  {
     .BenefitsOfReading {
-        background-color: rgb(236, 27, 174);
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        font-size: 1.5rem;
+        height: auto;
+    }
+
+    .benefits-list {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+
+    }
+
+    .benefit-item {
+        margin-top: 2rem;
+        padding: 1rem;
+        font-weight: 600;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        width: 90%;
+        height: 30vh;
+        
+    }
+
+    .sort-btn {
+        padding: 25px 50px;
+        font-size: 20px;
+    }
+
+    .book-sorted-cover, .not-boobook-sorted-coverk{
+        width: 450px;
+        height: 500px;
+    }
+  }
+
+  @media (min-width: 1441px) {
+    .BenefitsOfReading {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .benefits-list {
+        width: 40%;
+    }
+
+    .benefit-item {
+        padding: 2rem;
+        font-weight: 600;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        width: 60%;
+        height: 30vh;
+        width: 90%;
+        font-size: 1.4rem;
+    }
+
+    .books-sorted-div {
+        width: 60%;
+        height: auto;
+    }
+
+    .book-sorted-cover, .not-boobook-sorted-coverk{
+        width: 450px;
+        height: 500px;
+    }
+
+    .sort-btn {
+        padding: 25px 30px;
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    .par-arg {
+        align-self: flex-start;
+    }
+
+    .impar-arg {
+        align-self: flex-end;
     }
   }
 

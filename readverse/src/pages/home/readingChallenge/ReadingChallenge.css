@@ -1,101 +1,188 @@
 .readingChallenge{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: white;
+    margin-top: 5rem;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
 }
 
 .readingChallenge-section-logo{
-    font-size: 2rem;
-    font-weight: 600;
-    align-self: center;
-    padding: 1rem;
-    text-transform: capitalize;
+    display: grid;
+    place-items: center;
 }
 
 .readingChallenge-section{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    text-align: center;
+    font-size: 22px;
+    padding: 1rem;
+}
 
+.challenge-icon{
+    height: 300px;
+    width: 300px;
+    padding: 1rem;
 }
 
 .readingChallenge-list{
-    height: 100%;
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: space-around;
-}
-
-.readingChallenge-list li{
-    margin: 10px;
-    height: 10rem;
-    width: 95%;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    transition: 0.2s;
+}
+
+.challenge-item{
+    width: 100%;
+    height: 3rem;
     border-radius: 50%;
-}
-
-.readingChallenge-list li p{
+    margin: 20px;
+    align-self: center;
+    font-size: 20px;
+    text-align: center;
+    place-content: center;
+    padding: 1rem;
     font-weight: bold;
-    font-size: 22px;
+    color: rgb(56, 163, 6);
 }
 
-.challenge{
-    color: rgb(0, 0, 0);
-    font-weight: bold;
+.challenge {
+    color: rgb(56, 163, 6);
+    font-family: "Parkinsans", serif;
 }
 
-.color1:hover {
-    background-color: white;
-    background-image: url(../../../assets/icons/desafio1.png);
-    background-size: 10%;
-    opacity: 0,02;
+.challenge-item:hover {
+    color: rgb(166, 9, 214);
 }
 
-.color2:hover {
-    background-image: url(../../../assets/icons/desafio2.png);
-    background-size: 10%;
+.challenge:hover {
+    color: rgb(166, 9, 214);
 }
 
-.color3:hover {
-    background-image: url(../../../assets/icons/desafio3.png);
-    background-size: 10%;
-}
-
-.color4:hover {
-    background-image: url(../../../assets/icons/desafio4.png);
-    background-size: 10%;
-}
-
-.color5:hover {
-    background-image: url(../../../assets/icons/desafio5.png);
-    background-size: 10%;
-}
-
-.color6:hover {
-    background-image: url(../../../assets/icons/desafio6.png);
-    background-size: 10%;
-}
-
-.challenge-icon {
-
+.title-challenge-section{
+    font-size: 40px;
+    padding: 1rem;
+    color: green;
+    font-family: "Euphoria Script", serif;
+    text-align: center;
 }
 
 
 
+@media (min-width: 481px) and (max-width: 768px) {
+    .title-challenge-section{
+        font-size: 55px;
+    }
 
+    .challenge-icon{
+        height: 350px;
+        width: 350px;
+    }
 
+    .challenge-item{
+        font-size: 25px;
+    }
+ }
 
+ @media (min-width: 769px) and (max-width: 1024px) {
+    .title-challenge-section{
+        font-size: 60px;
+    }
+
+    .challenge-icon{
+        height: 450px;
+        width: 450px;
+    }
+
+    .challenge-item{
+        font-size: 30px;
+    }
+ }
+
+ @media (min-width: 1025px) and (max-width: 1440px) {
+    .readingChallenge{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .readingChallenge-list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .challenge-item {
+        border-radius: 0;
+        font-size: 28px;
+        list-style: disc;
+        color: rgb(67, 182, 52);
+    }
+
+    .challenge-item:hover {
+        color: aliceblue;
+    }
+
+    .challenge-icon {
+        width: 450px;
+        height: 450px;
+        padding: 0;
+    }
+
+    .challenge {
+        text-align: left;
+        transition: 0.3s;
+        font-weight: 100;
+    }
+
+    .challenge:hover {
+        color: rgb(238, 241, 239);
+    }
+
+    .title-challenge-section{
+        font-size: 50px;
+        color: green;
+        text-align: left;
+        font-family: "Euphoria Script", serif;
+        text-align: center;
+    }
+
+ }
+
+ @media (min-width: 1441px)  {
+    .readingChallenge{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .readingChallenge-list {
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .challenge-item {
+        border-radius: 0;
+        font-size: 28px;
+        list-style: disc;
+        
+    }
+
+    .challenge-icon {
+        width: 700px;
+        height: 700px;
+        padding: 0;
+    }
+
+    .challenge {
+        text-align: left;
+        transition: 0.3s;
+        font-weight: 100;
+    }
+
+    .title-challenge-section{
+        font-size: 70px;
+        color: green;
+        text-align: left;
+        font-family: "Euphoria Script", serif;
+    }
+ }

@@ -54,7 +54,7 @@ return(
             {sortedBook && AllBooksData[sortedBook] ? (
              <div className='book-sorted-display'>
                 <p><strong>{AllBooksData[sortedBook].title}</strong></p>
-                <p>Autor: {AllBooksData[sortedBook].autor}</p>
+                <p><strong>{AllBooksData[sortedBook].autor}</strong></p>
                 <img
                 className="book-sorted-cover"
                 src={AllBooksData[sortedBook].cover}
