@@ -1,85 +1,66 @@
-.bookReviews {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 90vh;
+/*Componente principal*/
+.book-reviews{
+    margin-top: 10rem;
+    height: 100vh;
+    padding: 1rem;
 }
 
+
+
+/*Titulo principal da página*/
 .book-reviews-title{
     font-size: 2rem;
-    text-transform: capitalize;
-    align-self: center;
-    font-weight: 600;
-    padding: 2rem;
-    padding-bottom: 4px;
-
-}
-
-.reviews-ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 75%;
-}
-
-.review-li{
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-    background-color: rgba(128, 128, 128, 0.137);
-    padding: 2rem;
-    margin: 10px;
-}
-
-.review-book-cover{
-    width: 200px;
-    height: 300px;
-    border-radius: 5px;
-}
-
-.review-title{
-    font-size: 18px;
     text-align: center;
 }
 
-.text-limited{
-    font-size: 18px;
-}
-
-/*Estilos do modal*/
-.review-modal-cover{
-    height: 100%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.review-modal-cover img{
-    width: 450px;
-    height: 600px;
-}
-
-.review-modal-infor {
-    height: 100%;
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 20px;
-}
-
-.review-modal-infor button{
+/*Card com as informações previas sobre a resenha*/
+.review-card  {
+    background-color: tomato;
+    display: block;
+    place-items: center;
+    height: 65vh;
+    border-radius: 10px;
     padding: 1rem;
-    border: 3px solid black;
-    margin-top: 10px;
+    margin: 10px;
+    width: 70rem;
 }
+
+/*Capa do livro da resenha*/
+.review-book-cover {
+    width: 200px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+
+  .review-card h3{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /*texto da resenha*/
+  .text-limited{
+    height: auto;
+    padding: 1rem;
+    font-size: 18pxpx;
+    text-align: center;
+    
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) { 
+
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) { 
+
+  }
+
+  @media (min-width: 1025px) and (max-width: 1440px) { 
+
+  }
+
+  @media (min-width: 1441px)  { 
+
+  }
 

@@ -15,8 +15,8 @@ return(
     <HomeIntroduce />
     <BenefitsOfReading />
     <ReadingChallenge />
-  {/*
     <BookReviews />
+  {/*
     <div className='quiz-way'>
         <Link to="/menuquiz">
             <span>Q</span>
